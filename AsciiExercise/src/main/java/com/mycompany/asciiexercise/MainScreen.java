@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.evenandoddexercise;
+package com.mycompany.asciiexercise;
 
 /**
  *
@@ -28,73 +28,66 @@ public class MainScreen extends javax.swing.JFrame {
 
         jLabelIntrNum = new javax.swing.JLabel();
         jTextFieldNum = new javax.swing.JTextField();
-        jButtonComprobador = new javax.swing.JButton();
-        jLabelIntrNumMensaje = new javax.swing.JLabel();
-        jLabelNumIntroducido = new javax.swing.JLabel();
+        jButtonConvertir = new javax.swing.JButton();
+        jLabelCaracterAscii = new javax.swing.JLabel();
+        jLabelCarAsciiObtenido = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Par o impar");
+        setTitle("Convertidor de números a carácteres ASCII");
 
-        jLabelIntrNum.setText("Introduzca un número:");
+        jLabelIntrNum.setText("Introduce un número del 1 al 200:");
 
-        jButtonComprobador.setText("Comprueba si el número introducido es par o impar");
-        jButtonComprobador.addActionListener(new java.awt.event.ActionListener() {
+        jButtonConvertir.setText("Convertir");
+        jButtonConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonComprobadorActionPerformed(evt);
+                jButtonConvertirActionPerformed(evt);
             }
         });
 
-        jLabelIntrNumMensaje.setText("El número introducido es:");
+        jLabelCaracterAscii.setText("El carácter ASCII es:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabelIntrNum)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextFieldNum, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonComprobador)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabelIntrNumMensaje)
-                                .addGap(64, 64, 64)
-                                .addComponent(jLabelNumIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(61, 61, 61))
+                        .addComponent(jLabelCaracterAscii)
+                        .addGap(53, 53, 53)
+                        .addComponent(jLabelCarAsciiObtenido, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonConvertir)
+                    .addComponent(jLabelIntrNum)
+                    .addComponent(jTextFieldNum, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(101, 101, 101)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelIntrNum)
-                    .addComponent(jTextFieldNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(84, 84, 84)
+                .addComponent(jLabelIntrNum)
                 .addGap(28, 28, 28)
-                .addComponent(jButtonComprobador)
-                .addGap(30, 30, 30)
+                .addComponent(jTextFieldNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(jButtonConvertir)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelIntrNumMensaje)
-                    .addComponent(jLabelNumIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(84, Short.MAX_VALUE))
+                    .addComponent(jLabelCaracterAscii)
+                    .addComponent(jLabelCarAsciiObtenido, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonComprobadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComprobadorActionPerformed
-        String numberText = jTextFieldNum.getText();
-        int number = Integer.parseInt(numberText);
-        if (number % 2 == 0) {
-            jLabelNumIntroducido.setText("El número " + number + " es par");
-        } else {
-            jLabelNumIntroducido.setText("El número " + number + " es impar");
-        }
-    }//GEN-LAST:event_jButtonComprobadorActionPerformed
+    private void jButtonConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConvertirActionPerformed
+        String texto = jTextFieldNum.getText();
+        int codigo = Integer.parseInt(texto);
+        char character = (char) codigo;
+        String str = Character.toString(character);
+        jLabelCarAsciiObtenido.setText(str);
+    }//GEN-LAST:event_jButtonConvertirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,10 +125,10 @@ public class MainScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonComprobador;
+    private javax.swing.JButton jButtonConvertir;
+    private javax.swing.JLabel jLabelCarAsciiObtenido;
+    private javax.swing.JLabel jLabelCaracterAscii;
     private javax.swing.JLabel jLabelIntrNum;
-    private javax.swing.JLabel jLabelIntrNumMensaje;
-    private javax.swing.JLabel jLabelNumIntroducido;
     private javax.swing.JTextField jTextFieldNum;
     // End of variables declaration//GEN-END:variables
 }

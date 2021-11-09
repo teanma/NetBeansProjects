@@ -57,49 +57,40 @@ public class SecondaryScreen extends javax.swing.JDialog {
         jPanelValoresLayout.setHorizontalGroup(
             jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelValoresLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelValoresLayout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabelValorPelicula)
-                            .addComponent(jLabelValorComida))
-                        .addGap(26, 26, 26))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelValoresLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelValoresLayout.createSequentialGroup()
-                                .addComponent(jLabelValorPais)
-                                .addGap(35, 35, 35))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelValoresLayout.createSequentialGroup()
-                                .addComponent(jLabelValorVideojuego)
-                                .addGap(18, 18, 18)))))
+                    .addComponent(jLabelValorVideojuego)
+                    .addComponent(jLabelValorComida)
+                    .addComponent(jLabelValorPais)
+                    .addComponent(jLabelValorPelicula))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabelPeliculaIntroducida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelVideojuegoIntroducido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelPaisIntroducido, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE)
-                    .addComponent(jLabelComidaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                    .addComponent(jLabelPeliculaIntroducida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
+                    .addComponent(jLabelComidaIntroducida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelVideojuegoIntroducido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelPaisIntroducido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanelValoresLayout.setVerticalGroup(
             jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelValoresLayout.createSequentialGroup()
-                .addContainerGap(29, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
                 .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelPeliculaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelValorPelicula))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelComidaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelValorComida))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelVideojuegoIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelValorVideojuego))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelPaisIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelValorPais))
-                .addGap(31, 31, 31))
+                    .addComponent(jLabelValorPelicula)
+                    .addComponent(jLabelPeliculaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelValorComida)
+                    .addComponent(jLabelComidaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44)
+                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelValorVideojuego)
+                    .addComponent(jLabelVideojuegoIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelValorPais)
+                    .addComponent(jLabelPaisIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41))
         );
 
         jButtonVolver.setText("Volver");
@@ -114,23 +105,22 @@ public class SecondaryScreen extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanelValores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(263, 263, 263)
-                        .addComponent(jButtonVolver)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(342, 342, 342)
+                .addComponent(jButtonVolver)
+                .addContainerGap(349, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelValores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jPanelValores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(jButtonVolver)
-                .addGap(23, 23, 23))
+                .addGap(21, 21, 21))
         );
 
         pack();
@@ -143,35 +133,19 @@ public class SecondaryScreen extends javax.swing.JDialog {
     }//GEN-LAST:event_jButtonVolverActionPerformed
 
     public void establecerPelicula(String pelicula) {
-        if (jLabelPeliculaIntroducida.getText().isEmpty()) {
-            jLabelPeliculaIntroducida.setText("Valor no introducido");
-        } else {
-            jLabelPeliculaIntroducida.setText(pelicula);
-        }
+        jLabelPeliculaIntroducida.setText(pelicula);
     }
     
     public void establecerComida(String comida) {
-        if (jLabelComidaIntroducida.getText().isEmpty()) {
-            jLabelComidaIntroducida.setText("Valor no introducido");
-        } else {
-            jLabelComidaIntroducida.setText(comida);
-        }
+        jLabelComidaIntroducida.setText(comida);
     }
     
     public void establecerVideojuego(String videojuego) {
-        if (jLabelVideojuegoIntroducido.getText().isEmpty()) {
-            jLabelVideojuegoIntroducido.setText("Valor no introducido");
-        } else {
-            jLabelVideojuegoIntroducido.setText(videojuego);
-        }
+        jLabelVideojuegoIntroducido.setText(videojuego); 
     }
     
     public void establecerPais(String pais) {
-        if (jLabelPaisIntroducido.getText().isEmpty()) {
-            jLabelPaisIntroducido.setText("Valor no introducido");
-        } else {
-            jLabelPaisIntroducido.setText(pais);
-        }
+        jLabelPaisIntroducido.setText(pais);
     }
     
     /**

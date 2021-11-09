@@ -53,6 +53,7 @@ public class MainScreen extends javax.swing.JFrame {
         jButtonValidar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tarea 2");
 
         jPanelPelicula.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -66,8 +67,8 @@ public class MainScreen extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addComponent(jLabelPelicula)
                 .addGap(18, 18, 18)
-                .addComponent(jTextFieldPeliculaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 598, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addComponent(jTextFieldPeliculaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanelPeliculaLayout.setVerticalGroup(
             jPanelPeliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,7 +103,7 @@ public class MainScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabelSelecOpc.setText("Seleccione una de las opciones (tras seleccionar la opción, puede introducir varias opciones)");
+        jLabelSelecOpc.setText("Seleccione cualquiera de las opciones (puede ocultar y volver a mostrar la opción seleccionada) ");
 
         jButtonPais.setText("País/es favorito/s");
         jButtonPais.addActionListener(new java.awt.event.ActionListener() {
@@ -116,21 +117,19 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelOpcionesLayout.setHorizontalGroup(
             jPanelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelOpcionesLayout.createSequentialGroup()
-                .addGroup(jPanelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelOpcionesLayout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(jLabelSelecOpc)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanelOpcionesLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButtonPelicula)
-                        .addGap(39, 39, 39)
-                        .addComponent(jButtonComida)
-                        .addGap(35, 35, 35)
-                        .addComponent(jButtonVideojuego)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                        .addComponent(jButtonPais)))
+                .addContainerGap()
+                .addComponent(jButtonPelicula)
+                .addGap(39, 39, 39)
+                .addComponent(jButtonComida)
+                .addGap(35, 35, 35)
+                .addComponent(jButtonVideojuego)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addComponent(jButtonPais)
                 .addContainerGap())
+            .addGroup(jPanelOpcionesLayout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(jLabelSelecOpc)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelOpcionesLayout.setVerticalGroup(
             jPanelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,7 +157,7 @@ public class MainScreen extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(jLabelComida)
                 .addGap(18, 18, 18)
-                .addComponent(jTextFieldComidaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldComidaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelComidaLayout.setVerticalGroup(
@@ -183,7 +182,7 @@ public class MainScreen extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addComponent(jLabelVideojuego)
                 .addGap(18, 18, 18)
-                .addComponent(jTextFieldVideojuegoIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldVideojuegoIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelVideojuegoLayout.setVerticalGroup(
@@ -208,7 +207,7 @@ public class MainScreen extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addComponent(jLabelPais)
                 .addGap(18, 18, 18)
-                .addComponent(jTextFieldPaisIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldPaisIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 641, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelPaisLayout.setVerticalGroup(
@@ -232,22 +231,21 @@ public class MainScreen extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanelPais, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelVideojuego, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelComida, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelPelicula, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(26, 26, 26))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jPanelOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(335, 335, 335)
-                        .addComponent(jButtonValidar)))
+                    .addComponent(jPanelComida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelPelicula, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelPais, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelVideojuego, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonValidar)
+                .addGap(337, 337, 337))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jPanelOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -255,49 +253,82 @@ public class MainScreen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelPelicula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanelComida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanelVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanelPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
                 .addComponent(jButtonValidar)
                 .addGap(18, 18, 18)
                 .addComponent(jPanelOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonPeliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPeliculaActionPerformed
-        jPanelPelicula.setVisible(true);
+        if (jPanelPelicula.isVisible()) {
+           jPanelPelicula.setVisible(false); 
+        } else {
+            jPanelPelicula.setVisible(true);
+        }
     }//GEN-LAST:event_jButtonPeliculaActionPerformed
 
     private void jButtonComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComidaActionPerformed
-        jPanelComida.setVisible(true);
+        if (jPanelComida.isVisible()) {
+           jPanelComida.setVisible(false); 
+        } else {
+            jPanelComida.setVisible(true);
+        }
     }//GEN-LAST:event_jButtonComidaActionPerformed
 
     private void jButtonVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVideojuegoActionPerformed
-        jPanelVideojuego.setVisible(true);
+        if (jPanelVideojuego.isVisible()) {
+           jPanelVideojuego.setVisible(false); 
+        } else {
+            jPanelVideojuego.setVisible(true);
+        }
     }//GEN-LAST:event_jButtonVideojuegoActionPerformed
 
     private void jButtonPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPaisActionPerformed
-        jPanelPais.setVisible(true);
+        if (jPanelPais.isVisible()) {
+           jPanelPais.setVisible(false); 
+        } else {
+            jPanelPais.setVisible(true);
+        }
     }//GEN-LAST:event_jButtonPaisActionPerformed
 
     private void jButtonValidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValidarActionPerformed
-        SecondaryScreen secondaryScreen = new SecondaryScreen(this, true);
+        SecondaryScreen secondaryScreen = new SecondaryScreen(this, false);
         secondaryScreen.setVisible(true);
-        String pelicula = jTextFieldPeliculaIntroducida.getText();
-        secondaryScreen.establecerPelicula(pelicula);
-        String comida = jTextFieldComidaIntroducida.getText();
-        secondaryScreen.establecerComida(comida);
-        String videojuego = jTextFieldVideojuegoIntroducido.getText();
-        secondaryScreen.establecerVideojuego(videojuego);
-        String pais = jTextFieldPaisIntroducido.getText();
-        secondaryScreen.establecerPais(pais);
+        if (jTextFieldPeliculaIntroducida.getText().isEmpty()) {
+            secondaryScreen.establecerPelicula("Valor no introducido");
+        } else {
+            String pelicula = jTextFieldPeliculaIntroducida.getText();
+            secondaryScreen.establecerPelicula(pelicula);
+        }
+        if (jTextFieldComidaIntroducida.getText().isEmpty()) {
+            secondaryScreen.establecerComida("Valor no introducido");
+        } else {
+            String comida = jTextFieldComidaIntroducida.getText();
+            secondaryScreen.establecerComida(comida);
+        }
+        if (jTextFieldVideojuegoIntroducido.getText().isEmpty()) {
+            secondaryScreen.establecerVideojuego("Valor no introducido");
+        } else {
+            String videojuego = jTextFieldVideojuegoIntroducido.getText();
+            secondaryScreen.establecerVideojuego(videojuego);
+        }
+        if (jTextFieldPaisIntroducido.getText().isEmpty()) {
+            secondaryScreen.establecerPais("Valor no introducido");
+        } else {
+            String pais = jTextFieldPaisIntroducido.getText();
+            secondaryScreen.establecerPais(pais);
+        }
     }//GEN-LAST:event_jButtonValidarActionPerformed
 
     /**

@@ -39,7 +39,7 @@ public class SecondaryScreen extends javax.swing.JDialog {
         jLabelComidaIntroducida = new javax.swing.JLabel();
         jLabelVideojuegoIntroducido = new javax.swing.JLabel();
         jLabelPaisIntroducido = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        jPanelVolver = new javax.swing.JPanel();
         jButtonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -67,7 +67,7 @@ public class SecondaryScreen extends javax.swing.JDialog {
         jPanelValoresIntroducidos.add(jLabelVideojuegoIntroducido);
         jPanelValoresIntroducidos.add(jLabelPaisIntroducido);
 
-        jPanel1.setLayout(new java.awt.GridLayout());
+        jPanelVolver.setLayout(new java.awt.GridLayout());
 
         jButtonVolver.setText("Volver");
         jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +75,7 @@ public class SecondaryScreen extends javax.swing.JDialog {
                 jButtonVolverActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonVolver);
+        jPanelVolver.add(jButtonVolver);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,7 +84,7 @@ public class SecondaryScreen extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelVolver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanelValores, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -99,7 +99,7 @@ public class SecondaryScreen extends javax.swing.JDialog {
                     .addComponent(jPanelValores, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
                     .addComponent(jPanelValoresIntroducidos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelVolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -180,8 +180,8 @@ public class SecondaryScreen extends javax.swing.JDialog {
     private javax.swing.JLabel jLabelValorPelicula;
     private javax.swing.JLabel jLabelValorVideojuego;
     private javax.swing.JLabel jLabelVideojuegoIntroducido;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelValores;
     private javax.swing.JPanel jPanelValoresIntroducidos;
+    private javax.swing.JPanel jPanelVolver;
     // End of variables declaration//GEN-END:variables
 }

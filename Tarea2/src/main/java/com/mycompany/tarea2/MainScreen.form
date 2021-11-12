@@ -133,7 +133,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabelSelecOpc1">
+        <Component class="javax.swing.JLabel" name="jLabelSelecOpc">
           <Properties>
             <Property name="text" type="java.lang.String" value="Seleccione cualquiera de las opciones (puede ocultar y volver a mostrar la opci&#xf3;n seleccionada) "/>
           </Properties>

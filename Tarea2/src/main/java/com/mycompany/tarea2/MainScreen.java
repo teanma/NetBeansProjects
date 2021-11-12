@@ -45,7 +45,7 @@ public class MainScreen extends javax.swing.JFrame {
         jLabelPais = new javax.swing.JLabel();
         jTextFieldPaisIntroducido = new javax.swing.JTextField();
         jPanelSelec = new javax.swing.JPanel();
-        jLabelSelecOpc1 = new javax.swing.JLabel();
+        jLabelSelecOpc = new javax.swing.JLabel();
         jPanelOpciones = new javax.swing.JPanel();
         jButtonPelicula = new javax.swing.JButton();
         jButtonComida = new javax.swing.JButton();
@@ -104,8 +104,8 @@ public class MainScreen extends javax.swing.JFrame {
 
         jPanelSelec.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabelSelecOpc1.setText("Seleccione cualquiera de las opciones (puede ocultar y volver a mostrar la opción seleccionada) ");
-        jPanelSelec.add(jLabelSelecOpc1);
+        jLabelSelecOpc.setText("Seleccione cualquiera de las opciones (puede ocultar y volver a mostrar la opción seleccionada) ");
+        jPanelSelec.add(jLabelSelecOpc);
 
         getContentPane().add(jPanelSelec);
 
@@ -266,7 +266,7 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelComida;
     private javax.swing.JLabel jLabelPais;
     private javax.swing.JLabel jLabelPelicula;
-    private javax.swing.JLabel jLabelSelecOpc1;
+    private javax.swing.JLabel jLabelSelecOpc;
     private javax.swing.JLabel jLabelVideojuego;
     private javax.swing.JPanel jPanelComida;
     private javax.swing.JPanel jPanelOpciones;

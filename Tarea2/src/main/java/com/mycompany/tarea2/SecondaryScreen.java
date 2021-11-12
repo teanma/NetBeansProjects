@@ -34,64 +34,40 @@ public class SecondaryScreen extends javax.swing.JDialog {
         jLabelValorComida = new javax.swing.JLabel();
         jLabelValorVideojuego = new javax.swing.JLabel();
         jLabelValorPais = new javax.swing.JLabel();
+        jPanelValoresIntroducidos = new javax.swing.JPanel();
         jLabelPeliculaIntroducida = new javax.swing.JLabel();
         jLabelComidaIntroducida = new javax.swing.JLabel();
         jLabelVideojuegoIntroducido = new javax.swing.JLabel();
         jLabelPaisIntroducido = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jButtonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Valores introducidos");
 
         jPanelValores.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelValores.setLayout(new java.awt.GridLayout(4, 1, 10, 20));
 
         jLabelValorPelicula.setText("Película:");
+        jPanelValores.add(jLabelValorPelicula);
 
         jLabelValorComida.setText("Comida:");
+        jPanelValores.add(jLabelValorComida);
 
         jLabelValorVideojuego.setText("Videojuego:");
+        jPanelValores.add(jLabelValorVideojuego);
 
         jLabelValorPais.setText("País:");
+        jPanelValores.add(jLabelValorPais);
 
-        javax.swing.GroupLayout jPanelValoresLayout = new javax.swing.GroupLayout(jPanelValores);
-        jPanelValores.setLayout(jPanelValoresLayout);
-        jPanelValoresLayout.setHorizontalGroup(
-            jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelValoresLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelValorVideojuego)
-                    .addComponent(jLabelValorComida)
-                    .addComponent(jLabelValorPais)
-                    .addComponent(jLabelValorPelicula))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabelPeliculaIntroducida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
-                    .addComponent(jLabelComidaIntroducida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelVideojuegoIntroducido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelPaisIntroducido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        jPanelValoresLayout.setVerticalGroup(
-            jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelValoresLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelValorPelicula)
-                    .addComponent(jLabelPeliculaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelValorComida)
-                    .addComponent(jLabelComidaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelValorVideojuego)
-                    .addComponent(jLabelVideojuegoIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
-                .addGroup(jPanelValoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelValorPais)
-                    .addComponent(jLabelPaisIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41))
-        );
+        jPanelValoresIntroducidos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelValoresIntroducidos.setLayout(new java.awt.GridLayout(0, 1));
+        jPanelValoresIntroducidos.add(jLabelPeliculaIntroducida);
+        jPanelValoresIntroducidos.add(jLabelComidaIntroducida);
+        jPanelValoresIntroducidos.add(jLabelVideojuegoIntroducido);
+        jPanelValoresIntroducidos.add(jLabelPaisIntroducido);
+
+        jPanel1.setLayout(new java.awt.GridLayout());
 
         jButtonVolver.setText("Volver");
         jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
@@ -99,28 +75,32 @@ public class SecondaryScreen extends javax.swing.JDialog {
                 jButtonVolverActionPerformed(evt);
             }
         });
+        jPanel1.add(jButtonVolver);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(342, 342, 342)
-                .addComponent(jButtonVolver)
-                .addContainerGap(349, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanelValores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanelValores, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelValoresIntroducidos, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jPanelValores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addComponent(jButtonVolver)
-                .addGap(21, 21, 21))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelValores, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                    .addComponent(jPanelValoresIntroducidos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -200,6 +180,8 @@ public class SecondaryScreen extends javax.swing.JDialog {
     private javax.swing.JLabel jLabelValorPelicula;
     private javax.swing.JLabel jLabelValorVideojuego;
     private javax.swing.JLabel jLabelVideojuegoIntroducido;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelValores;
+    private javax.swing.JPanel jPanelValoresIntroducidos;
     // End of variables declaration//GEN-END:variables
 }

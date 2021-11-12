@@ -35,12 +35,6 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelPelicula = new javax.swing.JPanel();
         jLabelPelicula = new javax.swing.JLabel();
         jTextFieldPeliculaIntroducida = new javax.swing.JTextField();
-        jPanelOpciones = new javax.swing.JPanel();
-        jButtonPelicula = new javax.swing.JButton();
-        jButtonComida = new javax.swing.JButton();
-        jButtonVideojuego = new javax.swing.JButton();
-        jLabelSelecOpc = new javax.swing.JLabel();
-        jButtonPais = new javax.swing.JButton();
         jPanelComida = new javax.swing.JPanel();
         jLabelComida = new javax.swing.JLabel();
         jTextFieldComidaIntroducida = new javax.swing.JTextField();
@@ -50,35 +44,70 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelPais = new javax.swing.JPanel();
         jLabelPais = new javax.swing.JLabel();
         jTextFieldPaisIntroducido = new javax.swing.JTextField();
+        jPanelSelec = new javax.swing.JPanel();
+        jLabelSelecOpc1 = new javax.swing.JLabel();
+        jPanelOpciones = new javax.swing.JPanel();
+        jButtonPelicula = new javax.swing.JButton();
+        jButtonComida = new javax.swing.JButton();
+        jButtonVideojuego = new javax.swing.JButton();
+        jButtonPais = new javax.swing.JButton();
         jButtonValidar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tarea 2");
+        getContentPane().setLayout(new java.awt.GridLayout(0, 1));
 
         jPanelPelicula.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabelPelicula.setText("Película:");
+        jPanelPelicula.add(jLabelPelicula);
 
-        javax.swing.GroupLayout jPanelPeliculaLayout = new javax.swing.GroupLayout(jPanelPelicula);
-        jPanelPelicula.setLayout(jPanelPeliculaLayout);
-        jPanelPeliculaLayout.setHorizontalGroup(
-            jPanelPeliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPeliculaLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabelPelicula)
-                .addGap(18, 18, 18)
-                .addComponent(jTextFieldPeliculaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-        jPanelPeliculaLayout.setVerticalGroup(
-            jPanelPeliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPeliculaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelPeliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldPeliculaIntroducida, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addComponent(jLabelPelicula))
-                .addContainerGap())
-        );
+        jTextFieldPeliculaIntroducida.setColumns(83);
+        jTextFieldPeliculaIntroducida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldPeliculaIntroducidaActionPerformed(evt);
+            }
+        });
+        jPanelPelicula.add(jTextFieldPeliculaIntroducida);
+
+        getContentPane().add(jPanelPelicula);
+
+        jPanelComida.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabelComida.setText("Comida:");
+        jPanelComida.add(jLabelComida);
+
+        jTextFieldComidaIntroducida.setColumns(83);
+        jPanelComida.add(jTextFieldComidaIntroducida);
+
+        getContentPane().add(jPanelComida);
+
+        jPanelVideojuego.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabelVideojuego.setText("Videojuego:");
+        jPanelVideojuego.add(jLabelVideojuego);
+
+        jTextFieldVideojuegoIntroducido.setColumns(81);
+        jPanelVideojuego.add(jTextFieldVideojuegoIntroducido);
+
+        getContentPane().add(jPanelVideojuego);
+
+        jPanelPais.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabelPais.setText("País:");
+        jPanelPais.add(jLabelPais);
+
+        jTextFieldPaisIntroducido.setColumns(85);
+        jPanelPais.add(jTextFieldPaisIntroducido);
+
+        getContentPane().add(jPanelPais);
+
+        jPanelSelec.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabelSelecOpc1.setText("Seleccione cualquiera de las opciones (puede ocultar y volver a mostrar la opción seleccionada) ");
+        jPanelSelec.add(jLabelSelecOpc1);
+
+        getContentPane().add(jPanelSelec);
 
         jPanelOpciones.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -88,6 +117,7 @@ public class MainScreen extends javax.swing.JFrame {
                 jButtonPeliculaActionPerformed(evt);
             }
         });
+        jPanelOpciones.add(jButtonPelicula);
 
         jButtonComida.setText("Comida/s favorita/s");
         jButtonComida.addActionListener(new java.awt.event.ActionListener() {
@@ -95,6 +125,7 @@ public class MainScreen extends javax.swing.JFrame {
                 jButtonComidaActionPerformed(evt);
             }
         });
+        jPanelOpciones.add(jButtonComida);
 
         jButtonVideojuego.setText("Videojuego/s favorito/s");
         jButtonVideojuego.addActionListener(new java.awt.event.ActionListener() {
@@ -102,8 +133,7 @@ public class MainScreen extends javax.swing.JFrame {
                 jButtonVideojuegoActionPerformed(evt);
             }
         });
-
-        jLabelSelecOpc.setText("Seleccione cualquiera de las opciones (puede ocultar y volver a mostrar la opción seleccionada) ");
+        jPanelOpciones.add(jButtonVideojuego);
 
         jButtonPais.setText("País/es favorito/s");
         jButtonPais.addActionListener(new java.awt.event.ActionListener() {
@@ -111,114 +141,9 @@ public class MainScreen extends javax.swing.JFrame {
                 jButtonPaisActionPerformed(evt);
             }
         });
+        jPanelOpciones.add(jButtonPais);
 
-        javax.swing.GroupLayout jPanelOpcionesLayout = new javax.swing.GroupLayout(jPanelOpciones);
-        jPanelOpciones.setLayout(jPanelOpcionesLayout);
-        jPanelOpcionesLayout.setHorizontalGroup(
-            jPanelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelOpcionesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButtonPelicula)
-                .addGap(39, 39, 39)
-                .addComponent(jButtonComida)
-                .addGap(35, 35, 35)
-                .addComponent(jButtonVideojuego)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(jButtonPais)
-                .addContainerGap())
-            .addGroup(jPanelOpcionesLayout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(jLabelSelecOpc)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelOpcionesLayout.setVerticalGroup(
-            jPanelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelOpcionesLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelSelecOpc)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonPelicula)
-                    .addComponent(jButtonComida)
-                    .addComponent(jButtonVideojuego)
-                    .addComponent(jButtonPais))
-                .addGap(17, 17, 17))
-        );
-
-        jPanelComida.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabelComida.setText("Comida:");
-
-        javax.swing.GroupLayout jPanelComidaLayout = new javax.swing.GroupLayout(jPanelComida);
-        jPanelComida.setLayout(jPanelComidaLayout);
-        jPanelComidaLayout.setHorizontalGroup(
-            jPanelComidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelComidaLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabelComida)
-                .addGap(18, 18, 18)
-                .addComponent(jTextFieldComidaIntroducida, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelComidaLayout.setVerticalGroup(
-            jPanelComidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelComidaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelComidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldComidaIntroducida, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(jLabelComida))
-                .addContainerGap())
-        );
-
-        jPanelVideojuego.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabelVideojuego.setText("Videojuego:");
-
-        javax.swing.GroupLayout jPanelVideojuegoLayout = new javax.swing.GroupLayout(jPanelVideojuego);
-        jPanelVideojuego.setLayout(jPanelVideojuegoLayout);
-        jPanelVideojuegoLayout.setHorizontalGroup(
-            jPanelVideojuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelVideojuegoLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabelVideojuego)
-                .addGap(18, 18, 18)
-                .addComponent(jTextFieldVideojuegoIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelVideojuegoLayout.setVerticalGroup(
-            jPanelVideojuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelVideojuegoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelVideojuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldVideojuegoIntroducido, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addComponent(jLabelVideojuego))
-                .addContainerGap())
-        );
-
-        jPanelPais.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabelPais.setText("País:");
-
-        javax.swing.GroupLayout jPanelPaisLayout = new javax.swing.GroupLayout(jPanelPais);
-        jPanelPais.setLayout(jPanelPaisLayout);
-        jPanelPaisLayout.setHorizontalGroup(
-            jPanelPaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPaisLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabelPais)
-                .addGap(18, 18, 18)
-                .addComponent(jTextFieldPaisIntroducido, javax.swing.GroupLayout.PREFERRED_SIZE, 641, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelPaisLayout.setVerticalGroup(
-            jPanelPaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPaisLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelPaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldPaisIntroducido, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(jLabelPais))
-                .addContainerGap())
-        );
+        getContentPane().add(jPanelOpciones);
 
         jButtonValidar.setText("Validar");
         jButtonValidar.addActionListener(new java.awt.event.ActionListener() {
@@ -226,45 +151,7 @@ public class MainScreen extends javax.swing.JFrame {
                 jButtonValidarActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelComida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelPelicula, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelPais, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelVideojuego, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonValidar)
-                .addGap(337, 337, 337))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jPanelOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanelPelicula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanelComida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanelVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanelPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
-                .addComponent(jButtonValidar)
-                .addGap(18, 18, 18)
-                .addComponent(jPanelOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
+        getContentPane().add(jButtonValidar);
 
         pack();
         setLocationRelativeTo(null);
@@ -331,6 +218,10 @@ public class MainScreen extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonValidarActionPerformed
 
+    private void jTextFieldPeliculaIntroducidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPeliculaIntroducidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldPeliculaIntroducidaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -375,12 +266,13 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelComida;
     private javax.swing.JLabel jLabelPais;
     private javax.swing.JLabel jLabelPelicula;
-    private javax.swing.JLabel jLabelSelecOpc;
+    private javax.swing.JLabel jLabelSelecOpc1;
     private javax.swing.JLabel jLabelVideojuego;
     private javax.swing.JPanel jPanelComida;
     private javax.swing.JPanel jPanelOpciones;
     private javax.swing.JPanel jPanelPais;
     private javax.swing.JPanel jPanelPelicula;
+    private javax.swing.JPanel jPanelSelec;
     private javax.swing.JPanel jPanelVideojuego;
     private javax.swing.JTextField jTextFieldComidaIntroducida;
     private javax.swing.JTextField jTextFieldPaisIntroducido;

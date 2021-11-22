@@ -182,10 +182,15 @@ public class Pedido extends javax.swing.JFrame {
         if (jCheckBoxAguacate.isSelected()) {
             String alimento = "Aguacate";
             double aguacatePrice = 20.99;
-            String result = String.valueOf(alimento + ": " + aguacatePrice);
             price = price + aguacatePrice;
-            String finalPrice = String.valueOf(price);
-            JOptionPane.showMessageDialog(jLabelFrutas, price);
+            String finalPrice = String.valueOf(alimento + ": " + aguacatePrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
+        } else {
+            String alimento = "Aguacate";
+            double aguacatePrice = 20.99;
+            price = price - aguacatePrice;
+            String finalPrice = String.valueOf(alimento + ": " + aguacatePrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
         }
     }//GEN-LAST:event_jCheckBoxAguacateActionPerformed
 
@@ -193,10 +198,15 @@ public class Pedido extends javax.swing.JFrame {
         if (jCheckBoxPlátano.isSelected()) {
             String alimento = "Plátano";
             double platanoPrice = 35.99;
-            String result = String.valueOf(alimento + ": " + platanoPrice);
             price = price + platanoPrice;
-            String finalPrice = String.valueOf(price);
-            JOptionPane.showMessageDialog(jLabelFrutas, price);
+            String finalPrice = String.valueOf(alimento + ": " + platanoPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
+        } else {
+            String alimento = "Plátano";
+            double platanoPrice = 35.99;
+            price = price - platanoPrice;
+            String finalPrice = String.valueOf(alimento + ": " + platanoPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
         }
     }//GEN-LAST:event_jCheckBoxPlátanoActionPerformed
 
@@ -204,10 +214,15 @@ public class Pedido extends javax.swing.JFrame {
         if (jCheckBoxCebolla.isSelected()) {
             String alimento = "Cebolla";
             double cebollaPrice = 15.99;
-            String result = String.valueOf(alimento + ": " + cebollaPrice);
             price = price + cebollaPrice;
-            String finalPrice = String.valueOf(price);
-            JOptionPane.showMessageDialog(jLabelVerduras, price);
+            String finalPrice = String.valueOf(alimento + ": " + cebollaPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
+        } else {
+            String alimento = "Cebolla";
+            double cebollaPrice = 15.99;
+            price = price - cebollaPrice;
+            String finalPrice = String.valueOf(alimento + ": " + cebollaPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
         }
     }//GEN-LAST:event_jCheckBoxCebollaActionPerformed
 
@@ -215,10 +230,15 @@ public class Pedido extends javax.swing.JFrame {
         if (jCheckBoxPatatas.isSelected()) {
             String alimento = "Patata";
             double patataPrice = 12.99;
-            String result = String.valueOf(alimento + ": " + patataPrice);
             price = price + patataPrice;
-            String finalPrice = String.valueOf(price);
-            JOptionPane.showMessageDialog(jLabelVerduras, price);
+            String finalPrice = String.valueOf(alimento + ": " + patataPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
+        } else {
+            String alimento = "Patata";
+            double patataPrice = 12.99;
+            price = price - patataPrice;
+            String finalPrice = String.valueOf(alimento + ": " + patataPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
         }
     }//GEN-LAST:event_jCheckBoxPatatasActionPerformed
 
@@ -226,10 +246,15 @@ public class Pedido extends javax.swing.JFrame {
         if (jCheckBoxPuerro.isSelected()) {
             String alimento = "Puerro";
             double puerroPrice = 9.99;
-            String result = String.valueOf(alimento + ": " + puerroPrice);
             price = price + puerroPrice;
-            String finalPrice = String.valueOf(price);
-            JOptionPane.showMessageDialog(jLabelVerduras, price);
+            String finalPrice = String.valueOf(alimento + ": " + puerroPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
+        } else {
+            String alimento = "Puerro";
+            double puerroPrice = 9.99;
+            price = price - puerroPrice;
+            String finalPrice = String.valueOf(alimento + ": " + puerroPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
         }
     }//GEN-LAST:event_jCheckBoxPuerroActionPerformed
 
@@ -237,10 +262,15 @@ public class Pedido extends javax.swing.JFrame {
         if (jCheckBoxAjo.isSelected()) {
             String alimento = "Ajo";
             double ajoPrice = 10.99;
-            String result = String.valueOf(alimento + ": " + ajoPrice);
             price = price + ajoPrice;
-            String finalPrice = String.valueOf(price);
-            JOptionPane.showMessageDialog(jLabelVerduras, price);
+            String finalPrice = String.valueOf(alimento + ": " + ajoPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
+        } else {
+            String alimento = "Ajo";
+            double ajoPrice = 10.99;
+            price = price - ajoPrice;
+            String finalPrice = String.valueOf(alimento + ": " + ajoPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
         }
     }//GEN-LAST:event_jCheckBoxAjoActionPerformed
 
@@ -248,11 +278,15 @@ public class Pedido extends javax.swing.JFrame {
         if (jCheckBoxManzana.isSelected()) {
             String alimento = "Manzana";
             double manzanaPrice = 5.99;
-            String result = String.valueOf(alimento + ": " + manzanaPrice);
             price = price + manzanaPrice;
-            String finalPrice = String.valueOf(price);
-            JOptionPane.showMessageDialog(jLabelFrutas, price);
-            
+            String finalPrice = String.valueOf(alimento + ": " + manzanaPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
+        } else {
+            String alimento = "Manzana";
+            double manzanaPrice = 5.99;
+            price = price - manzanaPrice;
+            String finalPrice = String.valueOf(alimento + ": " + manzanaPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
         }
     }//GEN-LAST:event_jCheckBoxManzanaActionPerformed
 
@@ -260,10 +294,9 @@ public class Pedido extends javax.swing.JFrame {
         if (jCheckBoxNaranja.isSelected()) {
             String alimento = "Naranja";
             double naranjaPrice = 7.99;
-            String result = String.valueOf(alimento + ": " + naranjaPrice);
             price = price + naranjaPrice;
-            String finalPrice = String.valueOf(price);
-            JOptionPane.showMessageDialog(jLabelFrutas, price);
+            String finalPrice = String.valueOf(alimento + ": " + naranjaPrice + "\n" + "Precio final: " + price);
+            JOptionPane.showMessageDialog(jLabelFrutas, finalPrice);
         }
     }//GEN-LAST:event_jCheckBoxNaranjaActionPerformed
 

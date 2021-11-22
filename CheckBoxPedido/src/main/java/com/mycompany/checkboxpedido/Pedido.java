@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class Pedido extends javax.swing.JFrame {
 
+    private double price;
     /**
      * Creates new form Pedido
      */
@@ -50,6 +51,7 @@ public class Pedido extends javax.swing.JFrame {
         jCheckBoxAguacate = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Pedidos");
 
         jLabelPedidos.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPedidos.setText("Pedidos");
@@ -155,7 +157,7 @@ public class Pedido extends javax.swing.JFrame {
                     .addComponent(jLabelVerduras)
                     .addComponent(jLabelFrutas))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBoxPlátano)
                     .addComponent(jCheckBoxCebolla))
                 .addGap(12, 12, 12)
@@ -179,77 +181,89 @@ public class Pedido extends javax.swing.JFrame {
     private void jCheckBoxAguacateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxAguacateActionPerformed
         if (jCheckBoxAguacate.isSelected()) {
             String alimento = "Aguacate";
-            double price = 20.99;
-            String result = String.valueOf(alimento + ": " + price);
-            alimento += price;
-            JOptionPane.showMessageDialog(jLabelFrutas, alimento);
+            double aguacatePrice = 20.99;
+            String result = String.valueOf(alimento + ": " + aguacatePrice);
+            price = price + aguacatePrice;
+            String finalPrice = String.valueOf(price);
+            JOptionPane.showMessageDialog(jLabelFrutas, price);
         }
     }//GEN-LAST:event_jCheckBoxAguacateActionPerformed
 
     private void jCheckBoxPlátanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxPlátanoActionPerformed
         if (jCheckBoxPlátano.isSelected()) {
             String alimento = "Plátano";
-            double price = 35.99;
-            String result = String.valueOf(alimento + ": " + price);
-            JOptionPane.showMessageDialog(jLabelFrutas, result);
+            double platanoPrice = 35.99;
+            String result = String.valueOf(alimento + ": " + platanoPrice);
+            price = price + platanoPrice;
+            String finalPrice = String.valueOf(price);
+            JOptionPane.showMessageDialog(jLabelFrutas, price);
         }
     }//GEN-LAST:event_jCheckBoxPlátanoActionPerformed
 
     private void jCheckBoxCebollaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxCebollaActionPerformed
         if (jCheckBoxCebolla.isSelected()) {
             String alimento = "Cebolla";
-            double price = 15.99;
-            String result = String.valueOf(alimento + ": " + price);
-            result += price;
-            JOptionPane.showMessageDialog(jLabelVerduras, result);
+            double cebollaPrice = 15.99;
+            String result = String.valueOf(alimento + ": " + cebollaPrice);
+            price = price + cebollaPrice;
+            String finalPrice = String.valueOf(price);
+            JOptionPane.showMessageDialog(jLabelVerduras, price);
         }
     }//GEN-LAST:event_jCheckBoxCebollaActionPerformed
 
     private void jCheckBoxPatatasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxPatatasActionPerformed
         if (jCheckBoxPatatas.isSelected()) {
             String alimento = "Patata";
-            double price = 12.99;
-            String result = String.valueOf(alimento + ": " + price);
-            result += price;
-            JOptionPane.showMessageDialog(jLabelVerduras, result);
+            double patataPrice = 12.99;
+            String result = String.valueOf(alimento + ": " + patataPrice);
+            price = price + patataPrice;
+            String finalPrice = String.valueOf(price);
+            JOptionPane.showMessageDialog(jLabelVerduras, price);
         }
     }//GEN-LAST:event_jCheckBoxPatatasActionPerformed
 
     private void jCheckBoxPuerroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxPuerroActionPerformed
         if (jCheckBoxPuerro.isSelected()) {
             String alimento = "Puerro";
-            double price = 9.99;
-            String result = String.valueOf(alimento + ": " + price);
-            result += price;
-            JOptionPane.showMessageDialog(jLabelVerduras, result);
+            double puerroPrice = 9.99;
+            String result = String.valueOf(alimento + ": " + puerroPrice);
+            price = price + puerroPrice;
+            String finalPrice = String.valueOf(price);
+            JOptionPane.showMessageDialog(jLabelVerduras, price);
         }
     }//GEN-LAST:event_jCheckBoxPuerroActionPerformed
 
     private void jCheckBoxAjoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxAjoActionPerformed
         if (jCheckBoxAjo.isSelected()) {
             String alimento = "Ajo";
-            double price = 10.99;
-            String result = String.valueOf(alimento + ": " + price);
-            result += price;
-            JOptionPane.showMessageDialog(jLabelVerduras, result);
+            double ajoPrice = 10.99;
+            String result = String.valueOf(alimento + ": " + ajoPrice);
+            price = price + ajoPrice;
+            String finalPrice = String.valueOf(price);
+            JOptionPane.showMessageDialog(jLabelVerduras, price);
         }
     }//GEN-LAST:event_jCheckBoxAjoActionPerformed
 
     private void jCheckBoxManzanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxManzanaActionPerformed
         if (jCheckBoxManzana.isSelected()) {
             String alimento = "Manzana";
-            double price = 5.99;
-            String result = String.valueOf(alimento + ": " + price);
-            JOptionPane.showMessageDialog(jLabelFrutas, result);
+            double manzanaPrice = 5.99;
+            String result = String.valueOf(alimento + ": " + manzanaPrice);
+            price = price + manzanaPrice;
+            String finalPrice = String.valueOf(price);
+            JOptionPane.showMessageDialog(jLabelFrutas, price);
+            
         }
     }//GEN-LAST:event_jCheckBoxManzanaActionPerformed
 
     private void jCheckBoxNaranjaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxNaranjaActionPerformed
         if (jCheckBoxNaranja.isSelected()) {
             String alimento = "Naranja";
-            double price = 7.99;
-            String result = String.valueOf(alimento + ": " + price);
-            JOptionPane.showMessageDialog(jLabelFrutas, result);
+            double naranjaPrice = 7.99;
+            String result = String.valueOf(alimento + ": " + naranjaPrice);
+            price = price + naranjaPrice;
+            String finalPrice = String.valueOf(price);
+            JOptionPane.showMessageDialog(jLabelFrutas, price);
         }
     }//GEN-LAST:event_jCheckBoxNaranjaActionPerformed
 

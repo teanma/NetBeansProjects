@@ -4,6 +4,8 @@
  */
 package com.mycompany.checkbox;
 
+import java.awt.Color;
+import javax.swing.JOptionPane;
 /**
  *
  * @author TeodorAndreiMardale
@@ -26,11 +28,7 @@ public class CheckBox1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jCheckBoxAleman = new javax.swing.JCheckBox();
-        jCheckBoxIngles = new javax.swing.JCheckBox();
-        jCheckBoxItaliano = new javax.swing.JCheckBox();
-        jCheckBoxFrances = new javax.swing.JCheckBox();
-        jLabelIdiomas = new javax.swing.JLabel();
+        buttonGroupColores = new javax.swing.ButtonGroup();
         jButtonFinalizar = new javax.swing.JButton();
         jRadioButtonRojo = new javax.swing.JRadioButton();
         jRadioButtonVerde = new javax.swing.JRadioButton();
@@ -40,39 +38,24 @@ public class CheckBox1 extends javax.swing.JFrame {
         jLabelResultado = new javax.swing.JLabel();
         jComboBoxCoches = new javax.swing.JComboBox<>();
         jComboBoxColores = new javax.swing.JComboBox<>();
+        jPanelIdiomas = new javax.swing.JPanel();
+        jCheckBoxAleman = new javax.swing.JCheckBox();
+        jCheckBoxIngles = new javax.swing.JCheckBox();
+        jCheckBoxItaliano = new javax.swing.JCheckBox();
+        jCheckBoxFrances = new javax.swing.JCheckBox();
+        jLabelIdiomas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jCheckBoxAleman.setText("Alemán");
-        jCheckBoxAleman.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxAlemanActionPerformed(evt);
-            }
-        });
-
-        jCheckBoxIngles.setText("Inglés");
-        jCheckBoxIngles.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxInglesActionPerformed(evt);
-            }
-        });
-
-        jCheckBoxItaliano.setText("Italiano");
-        jCheckBoxItaliano.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxItalianoActionPerformed(evt);
-            }
-        });
-
-        jCheckBoxFrances.setText("Francés");
-        jCheckBoxFrances.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxFrancesActionPerformed(evt);
-            }
-        });
+        setTitle("CheckBox");
 
         jButtonFinalizar.setText("Finalizar");
+        jButtonFinalizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFinalizarActionPerformed(evt);
+            }
+        });
 
+        buttonGroupColores.add(jRadioButtonRojo);
         jRadioButtonRojo.setText("Rojo");
         jRadioButtonRojo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +63,7 @@ public class CheckBox1 extends javax.swing.JFrame {
             }
         });
 
+        buttonGroupColores.add(jRadioButtonVerde);
         jRadioButtonVerde.setText("Verde");
         jRadioButtonVerde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +71,7 @@ public class CheckBox1 extends javax.swing.JFrame {
             }
         });
 
+        buttonGroupColores.add(jRadioButtonNegro);
         jRadioButtonNegro.setText("Negro");
         jRadioButtonNegro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +79,7 @@ public class CheckBox1 extends javax.swing.JFrame {
             }
         });
 
+        buttonGroupColores.add(jRadioButtonBlanco);
         jRadioButtonBlanco.setText("Blanco");
         jRadioButtonBlanco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,75 +120,137 @@ public class CheckBox1 extends javax.swing.JFrame {
             }
         });
 
+        jCheckBoxAleman.setText("Alemán");
+        jCheckBoxAleman.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxAlemanActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxIngles.setText("Inglés");
+        jCheckBoxIngles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxInglesActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxItaliano.setText("Italiano");
+        jCheckBoxItaliano.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxItalianoActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxFrances.setText("Francés");
+        jCheckBoxFrances.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxFrancesActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelIdiomasLayout = new javax.swing.GroupLayout(jPanelIdiomas);
+        jPanelIdiomas.setLayout(jPanelIdiomasLayout);
+        jPanelIdiomasLayout.setHorizontalGroup(
+            jPanelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelIdiomasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelIdiomas, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelIdiomasLayout.createSequentialGroup()
+                        .addComponent(jCheckBoxAleman)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBoxIngles)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBoxItaliano)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBoxFrances)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelIdiomasLayout.setVerticalGroup(
+            jPanelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelIdiomasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBoxAleman)
+                    .addComponent(jCheckBoxIngles)
+                    .addComponent(jCheckBoxItaliano)
+                    .addComponent(jCheckBoxFrances))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelIdiomas, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButtonRojo)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanelIdiomas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jRadioButtonRojo)
+                                .addGap(10, 10, 10)
+                                .addComponent(jRadioButtonVerde)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButtonNegro)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButtonBlanco)))
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonVerde)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonNegro)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonBlanco))
+                        .addComponent(jButtonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 29, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBoxAleman)
-                                .addGap(18, 18, 18)
-                                .addComponent(jCheckBoxIngles)
-                                .addGap(18, 18, 18)
-                                .addComponent(jCheckBoxItaliano)
-                                .addGap(18, 18, 18)
-                                .addComponent(jCheckBoxFrances))
-                            .addComponent(jLabelIdiomas, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(38, 38, 38)
-                        .addComponent(jButtonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanelResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBoxCoches, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBoxColores, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(38, Short.MAX_VALUE))
+                            .addComponent(jPanelResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxColores, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxCoches, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBoxAleman)
-                            .addComponent(jCheckBoxIngles)
-                            .addComponent(jCheckBoxItaliano)
-                            .addComponent(jCheckBoxFrances))
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabelIdiomas, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelIdiomas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonFinalizar, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonRojo)
                     .addComponent(jRadioButtonVerde)
                     .addComponent(jRadioButtonNegro)
                     .addComponent(jRadioButtonBlanco))
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addComponent(jComboBoxCoches, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jComboBoxColores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(27, 27, 27)
                 .addComponent(jPanelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addGap(53, 53, 53))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBoxFrancesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxFrancesActionPerformed
-        // TODO add your handling code here:
+        String texto = "Idiomas: ";
+        
+        if(jCheckBoxAleman.isSelected()) {
+            texto += "Alemán, ";
+        }
+        if(jCheckBoxIngles.isSelected()) {
+            texto += "Inglés, ";
+        }
+        if(jCheckBoxItaliano.isSelected()) {
+            texto += "Italiano, ";
+        }
+        if(jCheckBoxFrances.isSelected()) {
+            texto += "Francés, ";
+        }
+        texto = texto.substring(0, texto.length() - 2);
+        jLabelIdiomas.setText(texto);
     }//GEN-LAST:event_jCheckBoxFrancesActionPerformed
 
     private void jComboBoxCochesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCochesActionPerformed
@@ -233,28 +281,76 @@ public class CheckBox1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBoxAlemanActionPerformed
 
     private void jCheckBoxInglesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxInglesActionPerformed
-        // TODO add your handling code here:
+        String texto = "Idiomas: ";
+        
+        if(jCheckBoxAleman.isSelected()) {
+            texto += "Alemán, ";
+        }
+        if(jCheckBoxIngles.isSelected()) {
+            texto += "Inglés, ";
+        }
+        if(jCheckBoxItaliano.isSelected()) {
+            texto += "Italiano, ";
+        }
+        if(jCheckBoxFrances.isSelected()) {
+            texto += "Francés, ";
+        }
+        texto = texto.substring(0, texto.length() - 2);
+        jLabelIdiomas.setText(texto);
     }//GEN-LAST:event_jCheckBoxInglesActionPerformed
 
     private void jCheckBoxItalianoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxItalianoActionPerformed
-        // TODO add your handling code here:
+        String texto = "Idiomas: ";
+        
+        if(jCheckBoxAleman.isSelected()) {
+            texto += "Alemán, ";
+        }
+        if(jCheckBoxIngles.isSelected()) {
+            texto += "Inglés, ";
+        }
+        if(jCheckBoxItaliano.isSelected()) {
+            texto += "Italiano, ";
+        }
+        if(jCheckBoxFrances.isSelected()) {
+            texto += "Francés, ";
+        }
+        texto = texto.substring(0, texto.length() - 2);
+        jLabelIdiomas.setText(texto);
     }//GEN-LAST:event_jCheckBoxItalianoActionPerformed
 
     private void jRadioButtonRojoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonRojoActionPerformed
-        // TODO add your handling code here:
+        if(jRadioButtonRojo.isSelected()) {
+            jPanelResultado.setBackground(Color.red);
+            jLabelResultado.setText("ROJO");
+        }
     }//GEN-LAST:event_jRadioButtonRojoActionPerformed
 
     private void jRadioButtonVerdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonVerdeActionPerformed
-        // TODO add your handling code here:
+        if(jRadioButtonVerde.isSelected()) {
+            jPanelResultado.setBackground(Color.green);
+            jLabelResultado.setText("VERDE");
+        }
     }//GEN-LAST:event_jRadioButtonVerdeActionPerformed
 
     private void jRadioButtonNegroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonNegroActionPerformed
-        // TODO add your handling code here:
+        if(jRadioButtonNegro.isSelected()) {
+            jPanelResultado.setBackground(Color.black);
+            jLabelResultado.setForeground(Color.white);
+            jLabelResultado.setText("NEGRO");
+        }
     }//GEN-LAST:event_jRadioButtonNegroActionPerformed
 
     private void jRadioButtonBlancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonBlancoActionPerformed
-        // TODO add your handling code here:
+        if(jRadioButtonBlanco.isSelected()) {
+            jPanelResultado.setBackground(Color.white);
+            jLabelResultado.setText("BLANCO");
+        }
     }//GEN-LAST:event_jRadioButtonBlancoActionPerformed
+
+    private void jButtonFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFinalizarActionPerformed
+        JOptionPane.showMessageDialog(null, "Finalizando aplicación");
+        System.exit(0);
+    }//GEN-LAST:event_jButtonFinalizarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,6 +388,7 @@ public class CheckBox1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroupColores;
     private javax.swing.JButton jButtonFinalizar;
     private javax.swing.JCheckBox jCheckBoxAleman;
     private javax.swing.JCheckBox jCheckBoxFrances;
@@ -301,6 +398,7 @@ public class CheckBox1 extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBoxColores;
     private javax.swing.JLabel jLabelIdiomas;
     private javax.swing.JLabel jLabelResultado;
+    private javax.swing.JPanel jPanelIdiomas;
     private javax.swing.JPanel jPanelResultado;
     private javax.swing.JRadioButton jRadioButtonBlanco;
     private javax.swing.JRadioButton jRadioButtonNegro;

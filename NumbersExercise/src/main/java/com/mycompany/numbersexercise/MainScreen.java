@@ -110,21 +110,25 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldPrimNumActionPerformed
 
     private void jButtonCompararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCompararActionPerformed
-        String numberText1 = jTextFieldPrimNum.getText();
-        String numberText2 = jTextFieldSegNum.getText();
-        String newNumber1 = numberText1.replace(",", ".");
-        String newNumber2 = numberText2.replace(",", ".");
-        Double number1 = Double.parseDouble(newNumber1);
-        Double number2 = Double.parseDouble(newNumber2);
-        if (number1 < number2) {
+        try {
+            String numberText1 = jTextFieldPrimNum.getText();
+            String numberText2 = jTextFieldSegNum.getText();
+            String newNumber1 = numberText1.replace(",", ".");
+            String newNumber2 = numberText2.replace(",", ".");
+            Double number1 = Double.parseDouble(newNumber1);
+            Double number2 = Double.parseDouble(newNumber2);
+            if (number1 < number2) {
             jLabelTextoResultado.setText("El número 1 es " + number1 + " y el número 2 es " + number2 + 
             ". Por lo tanto el numero 1 " + "(" + number1 + ")" + " es menor que el número 2 " + "(" + number2 + ")");
-        } else if (number1 > number2) {
+            } else if (number1 > number2) {
             jLabelTextoResultado.setText("El número 1 es " + number1 + " y el número 2 es " + number2 + 
             ". Por lo tanto el numero 1 " + "(" + number1 + ")" + " es mayor que el número 2 " + "(" + number2 + ")");
-        } else {
+            } else {
             jLabelTextoResultado.setText("El número 1 es " + number1 + " y el número 2 es " + number2 + 
             ". Por lo tanto el numero 1 " + "(" + number1 + ")" + " es igual que el número 2 " + "(" + number2 + ")");
+            }
+        } catch (NumberFormatException e) {
+            jLabelTextoResultado.setText("No has introducido un número");
         }
     }//GEN-LAST:event_jButtonCompararActionPerformed
 

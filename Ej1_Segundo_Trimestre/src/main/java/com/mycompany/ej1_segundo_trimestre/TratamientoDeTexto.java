@@ -248,16 +248,23 @@ public class TratamientoDeTexto extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButtonDerechaActionPerformed
 
     private void jCheckBoxCursivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxCursivaActionPerformed
-        Font font;
-        int style;
         if (jCheckBoxCursiva.isSelected()) {
             Font italicFont = new Font("Tahoma", Font.ITALIC, 11);
             jTextFieldEstoEsTexto.setFont(italicFont);
-            style = Font.ITALIC;
-        } else if (jCheckBoxNegrita.isSelected()) {
+        }
+        if (jCheckBoxNegrita.isSelected() && jCheckBoxCursiva.isSelected()) {
             Font boldFont = new Font("Tahoma", Font.BOLD | Font.ITALIC, 11);
             jTextFieldEstoEsTexto.setFont(boldFont);
-        } else {
+        } 
+        if (jCheckBoxCursiva.isSelected() && !jCheckBoxNegrita.isSelected()) {
+            Font italicFont = new Font("Tahoma", Font.ITALIC, 11);
+            jTextFieldEstoEsTexto.setFont(italicFont);
+        }
+        if (!jCheckBoxCursiva.isSelected() && jCheckBoxNegrita.isSelected()) {
+            Font boldFont = new Font("Tahoma", Font.BOLD, 11);
+            jTextFieldEstoEsTexto.setFont(boldFont);
+        }
+        if (!jCheckBoxNegrita.isSelected() && !jCheckBoxCursiva.isSelected()) {
             Font plainFont = new Font("Tahoma", Font.PLAIN, 11);
             jTextFieldEstoEsTexto.setFont(plainFont);
         }
@@ -267,10 +274,20 @@ public class TratamientoDeTexto extends javax.swing.JFrame {
         if (jCheckBoxNegrita.isSelected()) {
             Font boldFont = new Font("Tahoma", Font.BOLD, 11);
             jTextFieldEstoEsTexto.setFont(boldFont);
-        } else if(jCheckBoxCursiva.isSelected()) {
+        }
+        if (jCheckBoxCursiva.isSelected() && jCheckBoxNegrita.isSelected()) {
             Font italicFont = new Font("Tahoma", Font.BOLD | Font.ITALIC, 11);
             jTextFieldEstoEsTexto.setFont(italicFont);
-        } else {
+        }
+        if (jCheckBoxNegrita.isSelected() && !jCheckBoxCursiva.isSelected()) {
+            Font boldFont = new Font("Tahoma", Font.BOLD, 11);
+            jTextFieldEstoEsTexto.setFont(boldFont);
+        }
+        if (!jCheckBoxNegrita.isSelected() && jCheckBoxCursiva.isSelected()) {
+            Font italicFont = new Font("Tahoma", Font.ITALIC, 11);
+            jTextFieldEstoEsTexto.setFont(italicFont);
+        }
+        if (!jCheckBoxNegrita.isSelected() && !jCheckBoxCursiva.isSelected()) {
             Font plainFont = new Font("Tahoma", Font.PLAIN, 11);
             jTextFieldEstoEsTexto.setFont(plainFont);
         }

@@ -4,45 +4,70 @@
  */
 package com.mycompany.tarea3;
 
-import javax.swing.JPanel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.WindowConstants;
 
 /**
  *
  * @author TeodorAndreiMardale
  */
-public class MainScreen {
+public class MainScreen extends JFrame {
     
     public static void main(String[] args) {
-        JPanel panel = new JPanel();
-        JFrame frame = new JFrame();
-        frame.setBounds(0, 0, 600, 400);
-        JLabel introduzcaEdad = new JLabel("Introduzca su edad");
-        JTextField edadIntroducida = new JTextField(10);
-        JButton enviar = new JButton("Enviar");
-        JButton finalizar = new JButton("Finalizar");
-        frame.add(panel);
-        frame.add(introduzcaEdad);
-        frame.add(edadIntroducida);
-        frame.add(enviar);
-        frame.add(finalizar);
-        String edad = edadIntroducida.getText();
-        if (enviar.isSelected()) {
-            JOptionPane jOptionPane = new JOptionPane();
-            JOptionPane.showMessageDialog(null, "Su edad es: " + edad);
-        }
-        if (finalizar.isSelected()) {
-            JOptionPane jOptionPane = new JOptionPane();
-            JOptionPane.showMessageDialog(null, "Finalizando aplicación");
-            System.exit(0);
-        }
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+       inicializar();
+    }
+    
+    private static void inicializar() {
+        JFrame jFrameMainScreen = new JFrame();
+        jFrameMainScreen.setTitle("Aplicación con código");
+        jFrameMainScreen.setVisible(true);
+        jFrameMainScreen.setLayout(null);
+        jFrameMainScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jFrameMainScreen.setLocationRelativeTo(null);
+        jFrameMainScreen.setSize(320, 160);
+        
+        JLabel jLabelSelecOpc = new JLabel();
+        jLabelSelecOpc.setText("Seleccione una de las opciones");
+        jLabelSelecOpc.setBounds(62, 20, 240, 15);
+       
+        JButton jButtonEdad = new JButton("Introducir edad");
+        jButtonEdad.setBounds(25, 70, 120, 25);
+        jButtonEdad.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                try {
+                    String edad = JOptionPane.showInputDialog("Introduzca su edad");
+                    while (edad.isEmpty()) {
+                        JOptionPane.showMessageDialog(jFrameMainScreen, "El campo no debe estar vacío");
+                        edad = JOptionPane.showInputDialog("Introduzca su edad");
+                    }
+                    while (!edad.matches("[0-9]+")) {
+                        JOptionPane.showMessageDialog(jFrameMainScreen, "El campo debe ser un número");
+                        edad = JOptionPane.showInputDialog("Introduzca su edad");
+                    }
+                    JOptionPane.showMessageDialog(jFrameMainScreen, "Edad del usuario: " + edad + " años");
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(jFrameMainScreen, "Operación cancelada");
+                }
+                }
+            });
+          
+        JButton jButtonFinalizar = new JButton("Finalizar");
+        jButtonFinalizar.setBounds(190, 70, 85, 25);
+        jButtonFinalizar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(jFrameMainScreen, "Finalizando aplicación");
+                System.exit(0);
+            }
+        });
+        
+        jFrameMainScreen.add(jLabelSelecOpc);
+        jFrameMainScreen.add(jButtonEdad);
+        jFrameMainScreen.add(jButtonFinalizar);
     }
 }

@@ -25,8 +25,8 @@ public class MainScreen extends JFrame {
         JFrame jFrameMainScreen = new JFrame();
         jFrameMainScreen.setTitle("Aplicación con código");
         jFrameMainScreen.setVisible(true);
-        jFrameMainScreen.setLayout(null);
         jFrameMainScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jFrameMainScreen.setLayout(null);
         jFrameMainScreen.setLocationRelativeTo(null);
         jFrameMainScreen.setSize(320, 160);
         

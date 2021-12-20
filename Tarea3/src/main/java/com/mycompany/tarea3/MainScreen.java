@@ -42,16 +42,16 @@ public class MainScreen extends JFrame {
                 try {
                     String edad = JOptionPane.showInputDialog("Introduzca su edad");
                     while (edad.isEmpty()) {
-                        JOptionPane.showMessageDialog(null, "El campo no debe estar vacío");
+                        JOptionPane.showMessageDialog(jFrameMainScreen, "El campo no debe estar vacío");
                         edad = JOptionPane.showInputDialog("Introduzca su edad");
                     }
                     while (!edad.matches("[0-9]+")) {
-                        JOptionPane.showMessageDialog(null, "El campo debe ser un número");
+                        JOptionPane.showMessageDialog(jFrameMainScreen, "El campo debe ser un número");
                         edad = JOptionPane.showInputDialog("Introduzca su edad");
                     }
-                    JOptionPane.showMessageDialog(null, "Edad del usuario: " + edad + " años");
+                    JOptionPane.showMessageDialog(jFrameMainScreen, "Edad del usuario: " + edad + " años");
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "Operación cancelada");
+                    JOptionPane.showMessageDialog(jFrameMainScreen, "Operación cancelada");
                 }
                 }
             });
@@ -61,7 +61,7 @@ public class MainScreen extends JFrame {
         jButtonFinalizar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                JOptionPane.showMessageDialog(null, "Finalizando aplicación");
+                JOptionPane.showMessageDialog(jFrameMainScreen, "Finalizando aplicación");
                 System.exit(0);
             }
         });

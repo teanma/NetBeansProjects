@@ -35,7 +35,7 @@ public class MainClass extends JFrame {
         
         JLabel jLabelSelecProd = new JLabel();
         jLabelSelecProd.setText("Selecciona los productos a pedir");
-        jLabelSelecProd.setBounds(62, 20, 240, 15);
+        jLabelSelecProd.setBounds(62, 30, 240, 15);
         
         JCheckBox jCheckBoxBurguer = new JCheckBox("Burguer");
         jCheckBoxBurguer.setBounds(120, 70, 85, 25);
@@ -59,7 +59,7 @@ public class MainClass extends JFrame {
         });
         
         JCheckBox jCheckBoxPizza = new JCheckBox("Pizza");
-        jCheckBoxPizza.setBounds(120, 90, 85, 25);
+        jCheckBoxPizza.setBounds(120, 100, 85, 25);
         jCheckBoxPizza.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -80,7 +80,7 @@ public class MainClass extends JFrame {
         });
         
         JCheckBox jCheckBoxKebab = new JCheckBox("Kebab");
-        jCheckBoxKebab.setBounds(120, 110, 85, 25);
+        jCheckBoxKebab.setBounds(120, 130, 85, 25);
         jCheckBoxKebab.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {

@@ -88,12 +88,12 @@ public class Password extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldPwdIngresadoActionPerformed
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
-        String password = jTextFieldPwdIngresado.getText();
-        int pwd = Integer.parseInt(password);
-        if(pwd == 1234) {
-            JOptionPane.showMessageDialog(null, "Password correcto");
+        //String password = jTextFieldPwdIngresado.getText();
+        //int pwd = Integer.parseInt(password);
+        if(jTextFieldPwdIngresado.getText().equals("1234")) {
+            JOptionPane.showMessageDialog(this, "Password correcto");
         } else {
-            JOptionPane.showMessageDialog(null, "Password incorrecto");
+            JOptionPane.showMessageDialog(this, "Password incorrecto");
         }
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 

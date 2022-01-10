@@ -4,6 +4,8 @@
  */
 package com.mycompany.ej3_segundo_trimestre;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author TeodorAndreiMardale
@@ -101,11 +103,19 @@ public class Conversor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConvertirActionPerformed
-        String cantIntro = jTextFieldCantIntro.getText();
-        double dolar = Double.parseDouble(cantIntro);
-        double euro = dolar * 0.897;
-        String cantidad = Double.toString(euro);
-        jTextFieldCantConv.setText(cantidad);
+        try {
+           String cantIntro = jTextFieldCantIntro.getText();
+           double dolar = Double.parseDouble(cantIntro);
+           if (dolar >= 0) {
+               double euro = dolar * 0.897;
+               String cantidad = Double.toString(euro);
+               jTextFieldCantConv.setText(cantidad); 
+           } else {
+               JOptionPane.showMessageDialog(this, "Introduce un número mayor que 0");
+           }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Introduce un número");
+        }
     }//GEN-LAST:event_jButtonConvertirActionPerformed
 
     /**
